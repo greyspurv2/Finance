@@ -2,6 +2,9 @@ const express = require("express");
 
 const app = express();
 
+var path = require('path');
+var api = require('./api');
+
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
