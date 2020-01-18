@@ -1,22 +1,29 @@
 const express = require("express");
+const bodyParser = require('body-parser');
+const request = require('request');
 
 const app = express();
 
 
-// file retrival for index
+
+
+app.use(bodyParser.urlencoded({extended: true}));
+
+
+// file retrival for index.html
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
 });
 
-// file retrival for about
+// file retrival for about.html
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/about.html");
 });
 
 
-//file retrival for contact
+//file retrival for contact.html
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/contact.html");
@@ -29,23 +36,19 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/QA.html");
 });
 
+// request with placeholders until API have been chosen 
 
-//getting the data
-
-app.get('/apidata', (req, res) => {
-    res.json(apidadata)
-});
+request("url", function(error, response, body));
 
 
+//specifying the price in a JSON keypair of a stock, crypto or otherwise.
 
-// sending the data
+var apidata = JSON.parse(body);
+var price = data.last;
 
-app.get('/apidata', (req, res) => {
-    res.send({
-        apidadata: []
-    })
-});
 
+
+// listening on port 3000, can be changed depending on the port open upon deployment
 
 app.listen(3000, function() {
     console.log("server is running on port 3000")
