@@ -1,3 +1,5 @@
+// requiring our dependencies
+
 const express = require("express");
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -5,7 +7,7 @@ const request = require('request');
 const app = express();
 
 
-
+//setting up our body parser to be able to retrieve the api data.
 
 app.use(bodyParser.urlencoded({extended: true}));
 
