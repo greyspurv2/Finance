@@ -8,5 +8,22 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "node": "^13.6.0",
+    "popper": "^1.0.1",
+    "sass": "^1.24.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greyspurv2/Finance.git"
+  },
+  "bugs": {
+    "url": "https://github.com/greyspurv2/Finance/issues"
+  },
+  "homepage": "https://github.com/greyspurv2/Finance#readme"
 }
