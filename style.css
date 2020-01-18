@@ -3,17 +3,9 @@
  margin: 0;
 }
 
-
-
 .body-darktheme{
     background-color:#252525;
     color: #ccc;
-}
-
-.logo{
-    width: 2.5rem;
-    text-align: left;
-    padding: 0.5rem 1rem 0 1rem;
 }
 
 .navbar-style{
@@ -22,9 +14,35 @@
     margin-bottom: 2rem;
 }
 
+.navbar-style div a{
+    text-decoration: none;
+    color: #ccc;
+}
+
+.inconspicuous-link{
+    text-decoration: none;
+    color: #ccc;
+}
+
+.navbar-grid{
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.navbar-grid div{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.logo{
+    width: 4rem;
+}
+
+
 .searchbar{
-    color: #4a4a4a;
-    border: 1px solid #e7e7e7;
+    color: #d62020;
+    border: 1px solid #811d1d;
     text-align: center;
 }
 
@@ -63,3 +81,5 @@ h3 {
     grid-column-gap: 10px;
     grid-row-gap: 15px;
 }
+
+
