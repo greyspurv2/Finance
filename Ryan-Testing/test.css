@@ -1,0 +1,10 @@
+.body-darktheme{
+    /*The main color theme for the webpage*/
+    background-color:#252525;
+    color: #ccc;
+}
+
+.navbar{
+    background-color: #202020;
+    height: 40px;
+}

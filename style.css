@@ -4,41 +4,44 @@
 }
 
 .body-darktheme{
+    /*The main color theme for the webpage*/
     background-color:#252525;
     color: #ccc;
 }
 
 .navbar-style{
+    /* Color, size, and margin of the navbar*/
     background-color: #202020;
     height: 3.5rem;
     margin-bottom: 2rem;
 }
 
 .navbar-style div a{
+    /* Style for hyperlinks <a> inside a section <div> */
     text-decoration: none;
     color: #ccc;
 }
 
-.inconspicuous-link{
-    text-decoration: none;
-    color: #ccc;
+.navbar-style div h2{
+    padding-top: 0.75rem;
+}
+
+.logo{
+    width: 3rem;
+    padding-top: 0.25rem;
 }
 
 .navbar-grid{
-    padding-top: 1.5rem;
+    /* CSS grid test for navbar*/
     display: grid;
     grid-template-columns: auto auto auto auto auto;
 }
 
 .navbar-grid div{
+    /* How things inside div should be positioned*/
     text-align: center;
-    vertical-align: middle;
+    vertical-align: baseline;
 }
-
-.logo{
-    width: 4rem;
-}
-
 
 .searchbar{
     color: #d62020;
@@ -46,8 +49,19 @@
     text-align: center;
 }
 
+
 .tempalign{
+    /* Placeholder to align stuff to center*/
     text-align: center;
+}
+
+.content{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.content div{
+    padding-top: 1.5rem;
 }
 
 h1 {
@@ -71,6 +85,11 @@ h3 {
 
 }
 
+a{
+    /* Placeholder for link color*/
+    text-decoration: none;
+    color: #8dc647;
+}
 
 .grid {
     display: grid;
