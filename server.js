@@ -1,5 +1,3 @@
-// requiring our dependencies
-
 const express = require("express");
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -7,7 +5,7 @@ const request = require('request');
 const app = express();
 
 
-//setting up our body parser to be able to retrieve the api data.
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -40,7 +38,7 @@ app.get("/", function(req, res) {
 
 // request with placeholders until API have been chosen 
 
-request("url", function(error, response, body));
+request("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo", function(error, response, body));
 
 
 //specifying the price in a JSON keypair of a stock, crypto or otherwise.
