@@ -16,6 +16,7 @@
     "node": "^13.6.0",
     "popper": "^1.0.1",
     "popper.js": "^1.16.0",
+    "request": "^2.88.0",
     "sass": "^1.25.0"
   },
   "devDependencies": {},
