@@ -1,6 +1,10 @@
 const express = require("express");
+
 const bodyParser = require('body-parser');
+
 const request = require('request');
+
+const myChart = require('chart.js');
 
 const app = express();
 
@@ -41,10 +45,9 @@ app.get("/", function(req, res) {
 request("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo", function(error, response, body));
 
 
-//specifying the price in a JSON keypair of a stock, crypto or otherwise.
 
-var apidata = JSON.parse(body);
-var price = data.last;
+
+//specifying the price in a JSON keypair of a stock, crypto or otherwise.
 
 
 
