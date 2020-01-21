@@ -1,7 +1,11 @@
 const express = require("express");
+
 const bodyParser = require('body-parser');
+
 const request = require('request');
 const fs = require('fs');
+const myChart = require('chart.js');
+
 const app = express();
 
 
@@ -35,6 +39,7 @@ app.get("/", function (req, res) {
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/QA.html");
 });
+
 
 // The test API URL
 const demo_URL = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=demo';
