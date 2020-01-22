@@ -12,6 +12,11 @@
 <body style="background-color: #252525;">
     <canvas id="myChart" style="width: 80%;"></canvas>
     <script>
+        
+        //exporting the api data modules to use in chart.js it should be called by calling the function APIdata. If you want to call the fuction
+        //You have to call it by APIdata.APIdata();
+        
+        const APIdata = ("./module1")
         var ctx = document.getElementById("myChart").getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
