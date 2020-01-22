@@ -16,7 +16,18 @@
         //exporting the api data modules to use in chart.js it should be called by calling the function APIdata. If you want to call the fuction
         //You have to call it by APIdata.APIdata();
         
-        const APIdata = ("./module1")
+        const APIdataBTC = require("./module1");
+        const APIdataETH = require("./module2");
+        const APIdataLTC = require("./module3");
+        const APIdataETC = require("./module4");
+        const APIdataXRP = require("./module5");
+        
+        const APIdataAAPL = require("./module6");
+        const APIdataGOOGL = require("./module7");
+        const APIdataSP500 = require("./module8");
+        const APIdataBYND = require("./module9");
+        const APIdataTSLA = require("./module10");
+        
         var ctx = document.getElementById("myChart").getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
