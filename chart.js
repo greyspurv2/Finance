@@ -24,16 +24,175 @@
 
         var myChartAPPL  = APIdataAAPL;
 
-        var myChart  = APIdataGOOGL
+        var myChartGOOGL  = APIdataGOOGL;
 
-        var myChart  = APIdataSP500;
+        var myChartSP500  = APIdataSP500;
 
-        var myChart  = APIdataBYND;
+        var myChartBYND  = APIdataBYND;
 
-        var myChart  = APIdataTSLA;
+        var myChartTSLA  = APIdataTSLA;
 
 
-        var ctx = document.getElementById("myChart").getContext('2d');
+        //crypto canvas ------------------------------------------------------------------------------------------------------------
+
+        var ctx = document.getElementById("myChartBTC").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+        var ctx = document.getElementById("myChartETH").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+        var ctx = document.getElementById("myChartLTC").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+        var ctx = document.getElementById("myChartETC").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+        var ctx = document.getElementById("myChartXRP").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+
+
+        //Stocks canvas ------------------------------------------------------------------------------------------------------------
+
+        var ctx = document.getElementById("myChartAPPL").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+        var ctx = document.getElementById("myChartGOOGL").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+        var ctx = document.getElementById("myChartSP500").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+        var ctx = document.getElementById("myChartBYND").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "Prices",
+                    backgroundColor: '#8dc647',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+        var ctx = document.getElementById("myChartTSLA").getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
