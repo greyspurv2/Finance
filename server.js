@@ -51,7 +51,7 @@ app.get("/", function (req, res) {
 
 //real time crypto
 //Bitcoin
-const APIdataBTC = request("https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&market=USD&symbol=BTC&apikey=JVQKTJDSYHG974CO", function (error, response, body) { });
+const APIdataBTC = request("https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&market=USD&symbol=BTC&apikey=JVQKTJDSYHG974CO", function (error, response, body) { console.log(body); });
 
 //Etherum
 const APIdataETH = request("https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&market=USD&symbol=ETH&apikey=JVQKTJDSYHG974CO", function (error, response, body) { });
@@ -68,7 +68,7 @@ const APIdataXRP = request("https://www.alphavantage.co/query?function=DIGITAL_C
 
 //time series stocks 
 // Apple stock
-const APIdataAPPL = request("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=5min&symbol=AAPL&apikey=JVQKTJDSYHG974CO", function (error, response, body) { });
+const APIdataAAPL = request("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=5min&symbol=AAPL&apikey=JVQKTJDSYHG974CO", function (error, response, body) { });
 
 //google stock 
 const APIdataGOOGL = request("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=5min&symbol=GOOGL&apikey=JVQKTJDSYHG974CO", function (error, response, body) { });
