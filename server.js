@@ -68,7 +68,7 @@ const APIdataXRP = request("https://www.alphavantage.co/query?function=DIGITAL_C
 
 //time series stocks 
 // Apple stock
-const APIdataAPPL = request("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=5min&symbol=AAPL&apikey=JVQKTJDSYHG974CO", function (error, response, body) { });
+const APIdataAAPL = request("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=5min&symbol=AAPL&apikey=JVQKTJDSYHG974CO", function (error, response, body) { });
 
 //google stock 
 const APIdataGOOGL = request("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&interval=5min&symbol=GOOGL&apikey=JVQKTJDSYHG974CO", function (error, response, body) { });
@@ -105,6 +105,10 @@ module.exports = APIdataTSLA;
 
 // listening on port 3000, can be changed depending on the port open upon deployment
 
-app.listen(3000, function () {
-    console.log("server is running on port 3000")
-});
+// The port will either be process.env.PORT, their port, or if it doesn't matter it will be 2000
+const PORT = process.env.PORT || 2000;
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// to run (add "npm install --save-dev nodemon")
+// write "npx nodemon" in terminal
