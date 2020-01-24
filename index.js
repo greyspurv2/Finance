@@ -14,7 +14,7 @@ const app = express();
 myURL = url;
 //console.log(myURL.StockURL(0, 0));
 
-app.get('/api/chart', (req, res) => {
+app.get('/api/data/', (req, res) => {
     request("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo", function (error, response, body) {
         let data = JSON.parse(body);
         //console.log("Data:", data["Meta Data"]);
@@ -22,6 +22,12 @@ app.get('/api/chart', (req, res) => {
     });
 });
 
+app.get('/api/data/stock', (req, res) => {
+    myURL.getData(myURL.StockURL(0, 0));
+    console.log(myURL);
+})
+
+app.get('/', (req, res) => res.send('Hello World!'));
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
