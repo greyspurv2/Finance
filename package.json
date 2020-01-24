@@ -1,31 +1,20 @@
 {
-  "name": "finance",
+  "name": "expresstesting",
   "version": "1.0.0",
-  "description": "finance",
-  "main": "server.js",
+  "description": "Express testing",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "npm getapi.js",
+    "start": "node index",
+    "dev": "npx nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.4.1",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
-    "node": "^13.6.0",
-    "popper": "^1.0.1",
-    "popper.js": "^1.16.0",
-    "request": "^2.88.0",
-    "sass": "^1.25.0"
+    "request": "^2.88.0"
   },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/greyspurv2/Finance.git"
-  },
-  "bugs": {
-    "url": "https://github.com/greyspurv2/Finance/issues"
-  },
-  "homepage": "https://github.com/greyspurv2/Finance#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
