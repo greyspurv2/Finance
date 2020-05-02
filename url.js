@@ -61,7 +61,7 @@ const CryptoURL = (func = 2, symb = 0, value_type = 3) => {
 }
 
 const getData = (url, value_type, callback) => {
-    request(url, function (error, response, body) {
+    return request(url, function (error, response, body) {
         //console.error('error:', error); // Print the error if one occurred
         //console.log('statusCode:', response && response.statusCode)
         body = JSON.parse(body);
@@ -73,6 +73,7 @@ const getData = (url, value_type, callback) => {
 
         // Gets the "Time Series ()" object
         const data = body[keys[1]];
+        //console.log(data);
         /* Example:
         "data: {
             "2020-01-23 16:00:00": {  // <--- key used later
@@ -112,15 +113,24 @@ const getData = (url, value_type, callback) => {
             objectjson.push(newObject);
             i++;
         }
-        //console.log(objectjson);
-        callback(objectjson);
+        //console.log("ObjectJSON", objectjson);
+        //console.log("Dates", dates);
+        return objectjson;
     });
 }
 
 //getData("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo", (objectjson) => console.log(objectjson));
 
-getData(CryptoURL(2, 0), (objectjson) => console.log(objectjson));
-console.log(CryptoURL(2, 0));
+//getData(StockURL(0, 0), (objectjson) => console.log("async: ", objectjson));
+//console.log("aSync await:", CryptoURL(2, 0));
+exports.getData = getData;
 exports.StockURL = StockURL;
 exports.IntraStockURL = IntraStockURL;
 exports.CryptoURL = CryptoURL;
+
+// Not Working- Need to return objectjson somehow?
+/*
+app.get('/api/data/stock', (req, res) => {
+    data = myURL.getData(myURL.StockURL(0, 0, (objectjson) => res.json(objectjson)));
+})
+*/

@@ -1,128 +1,220 @@
-* {
- padding: 0;
- margin: 0;
+:root {
+    /* Color Theme */
+    --green: #8dc647;
+    --darkgreen: #009900;
+    --dark: #252525;
+    --darker: #202020;
+    --light: #ccc;
+
 }
 
-#searchbar{
-    /* CSS for the sear*/
-    text-align: center;
-    height: 25px;
-    width: 500px;
-    border-radius: 5px;
-    /*color: #8dc647;*/
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    border: #8dc647;
-    border-width: 5px;
-}
-
-#graph{
-    max-width: 80%;
-    text-align: center;
-}
-
-.body-darktheme{
+body {
     /*The main color theme for the webpage*/
-    background-color:#252525;
-    color: #ccc;
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'helvetica';
 }
+  
+  /* mouse over link */
+.link:hover {
+    color: var(--green) !important;
+  }
 
-.navbar-style{
+/* ~~~~~~~~~~~ NavBar CSS ~~~~~~~~~~~ */
+.navbar{
     /* Color, size, and margin of the navbar*/
-    background-color: #202020;
-    height: 3.5rem;
+    background-color: var(--darker);
+    height: 4.5rem;
     margin-bottom: 2rem;
-}
-
-.navbar-style div a{
-    /* Style for hyperlinks <a> inside a section <div> */
-    text-decoration: none;
-    color: #ccc;
-}
-
-.navbar-style div h2{
-    padding-top: 0.75rem;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .logo{
-    width: 3rem;
-    padding-top: 0.25rem;
-    padding-right:-0.25rem;
+    width: 3.5rem;
+    margin: 5px 20px;
 }
 
-.navbar-grid{
-    /* CSS grid test for navbar*/
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-}
-
-.navbar-grid div{
-    /* How things inside div should be positioned*/
+.navbarItem {
+    margin-top: 20px;
+    padding-top: -10px;
+    flex-basis: 400px;
     text-align: center;
 }
 
-.searchbar{
-    color: #d62020;
-    border: 1px solid #811d1d;
-    text-align: center;
+.navbarItem a {
+    /* Style for hyperlinks <a> inside a section <div> */
+    text-decoration: none;
+    color: var(--light);
+    font-size: 2rem;
 }
 
+.navbarItem a:hover {
+    color: var(--green);
+    transition: 0.2s;
+  }
+
+/* ~~~~~~~ End NavBar CSS ~~~~~~~ */
 
 .title{
     text-align: center;
-    color: #8dc647
-}
-
-.content{
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.content div{
-    padding-top: 1.5rem;
-}
-
-.tempalign{
-    /* Placeholder until i add better CSS for the content */
-    text-align: center;
+    color: var(--green);
 }
 
 h1 {
-
-    font-family: helvetica;
     font-weight: 20;
     
 }
 
 h2 {
-
-    font-family: 'helvetica';
     font-weight: 15;
 
 }
 
 h3 {
-
-    font-family: 'helvetica';
     font-weight: 14;
+}
+
+/* ~~~~~~~~ SearchBar ~~~~~~~~~ */
+#searchflexbox {
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 
 }
 
-a{
-    /* Placeholder for link color*/
-    text-decoration: none;
-    color: #8dc647;
-    /*color: #74ad2e; /* Darker green */
+#searchbar {
+    flex-basis: 500px;
+    min-width: 50px;
+    max-width: 600px;
+    border-radius: 25px;
+    height: 35px;
+    border: 1px solid grey;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-template-columns: 100px 50px 100px;
-    grid-template-rows: 80px auto 80px; 
-    grid-column-gap: 10px;
-    grid-row-gap: 15px;
+#searchbar:hover {
+    /*
+    outline-width: 0.5px;
+    outline-color: #666;
+    outline-style: auto;*/
+    box-shadow: 0px 0px 1px 1px var(--green);
+    transition: 0.3s;
 }
 
+#searchbar input {
+    color: var(--light);
+    width: 90%;
+    height: 80%;
+    border: 0px;
+    font: 16px arial,sans-serif;
+    line-height: 34px;
+    height: 34px;
+    background-color: transparent;
+}
 
+#searchbar input:focus {
+    outline-width: 0;
+}
+
+#searchbuttondiv {
+    height: 40px;
+    width:125px;
+}
+
+#searchbutton {
+    border-radius: 4px;
+    height: 34px;
+    width: 125px;
+    border: 0px solid;
+    box-shadow: 0px 0px 1px 1px grey;
+    color: var(--light);
+    margin-left: 8px;
+    background-color: var(--darker);
+    font-family: arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#searchbutton:hover {
+    /*
+    outline-width: 0.5px;
+    outline-color: #666;
+    outline-style: auto;*/
+    background-color: var(--green);
+    box-shadow: 0px 0px 1px 1px var(--light);
+    color: var(--light);
+    transition: 0.3s;
+}
+/* ~~~~~~~~~~~ End SearchBar ~~~~~~~~~~ */
+
+/* Footer */
+#footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:60px;   /* Height of the footer */
+    background: var(--darker);
+ }
+/* END Footer */
+
+/* ~~~~~~ Start Graphs ~~~~~~~ */
+.GraphCanvas {
+    width: 80%;
+    height: 100%;
+    background-color: var(--light);
+}
+
+#CanvasesItems {
+    /*
+    height: 300px;
+    width: 80%;
+    max-width: 500px;*/
+    margin: 20px 20px 20px 10px;
+    text-align: center;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    flex-basis: auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+#Canvasesflexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+/* END Graphs */
+
+/* Custom Side scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--light);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--green);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--darkgreen);
+  }

@@ -1,9 +1,8 @@
 const express = require('express');
 const path = require('path');
-const memberz = require("./members");
-const url = require("./url");
 const request = require("request");
 const fs = require("fs");
+const alpha = require('alphavantage')({ key: 'YDAMJ2ZN9K88IYDF' });
 
 //console.log(memberz);
 const app = express();
@@ -22,14 +21,9 @@ app.get('/api/data/', (req, res) => {
     });
 });
 
-app.get('/api/data/stock', (req, res) => {
-    myURL.getData(myURL.StockURL(0, 0));
-    console.log(myURL);
-})
-
 app.get('/', (req, res) => res.send('Hello World!'));
 
-// Set static folder
+// Set static folder (for CSS, pictures, etc)
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Use a port which is compatible with other data
